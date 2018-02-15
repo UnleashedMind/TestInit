@@ -1,0 +1,103 @@
+{
+	"name": "myappr-2018-02-15-15-13-01",
+	"projectId": "c55b2a71-12a5-11e8-ac43-4901fe0615a8",
+	"region": "us-east-1",
+	"state": "NORMAL",
+	"createdDate": "2018-02-15T23:13:02.626Z",
+	"lastUpdatedDate": "2018-02-15T23:13:02.626Z",
+	"consoleUrl": "https://console.aws.amazon.com/mobilehub/home#/c55b2a71-12a5-11e8-ac43-4901fe0615a8/build",
+	"resources": [
+		{
+			"type": "AWS::Pinpoint::AnalyticsApplication",
+			"name": "myappr20180215151301_MobileHub",
+			"arn": "b5be186212a14956ab5212a99e7d0ad2",
+			"feature": "analytics",
+			"attributes": {
+				"lastUpdateRequestID": "c5675fe4-12a5-11e8-9be6-cfd9b643e64b"
+			}
+		},
+		{
+			"type": "AWS::IAM::Policy",
+			"name": "myappr_mobileanalytics_MOBILEHUB_707033483",
+			"arn": null,
+			"feature": "analytics",
+			"attributes": {
+				"authType": "unauthenticated",
+				"lastUpdateRequestID": "c5675fe4-12a5-11e8-9be6-cfd9b643e64b",
+				"role": "myappr_unauth_MOBILEHUB_707033483"
+			}
+		},
+		{
+			"type": "AWS::Cognito::IdentityPool",
+			"name": "myappr_MOBILEHUB_707033483",
+			"arn": "us-east-1:0f11b64d-cee4-4255-ac30-e87286912f3c",
+			"feature": "user-signin",
+			"attributes": {
+				"lastUpdateRequestID": "c5675fe4-12a5-11e8-9be6-cfd9b643e64b",
+				"poolid": "us-east-1:0f11b64d-cee4-4255-ac30-e87286912f3c",
+				"roleARNs": "arn:aws:iam::466632810889:role/myappr_unauth_MOBILEHUB_707033483"
+			}
+		},
+		{
+			"type": "AWS::IAM::Role",
+			"name": "myappr_unauth_MOBILEHUB_707033483",
+			"arn": "arn:aws:iam::466632810889:role/myappr_unauth_MOBILEHUB_707033483",
+			"feature": "user-signin",
+			"attributes": {
+				"authType": "unauthenticated",
+				"lastUpdateRequestID": "c5675fe4-12a5-11e8-9be6-cfd9b643e64b"
+			}
+		},
+		{
+			"type": "AWS::S3::Bucket",
+			"name": "myappr-hosting-mobilehub-707033483",
+			"arn": null,
+			"feature": "hosting",
+			"attributes": {
+				"lastUpdateRequestID": "c5675fe4-12a5-11e8-9be6-cfd9b643e64b",
+				"region": "us-east-1"
+			}
+		},
+		{
+			"type": "AWS::CloudFront::Distribution",
+			"name": "d2smcdp3v3r8c5.cloudfront.net",
+			"arn": null,
+			"feature": "hosting",
+			"attributes": {
+				"id": "E2QXH2VMSKIIF8",
+				"lastUpdateRequestID": "c5675fe4-12a5-11e8-9be6-cfd9b643e64b"
+			}
+		},
+		{
+			"type": "AWS::IAM::Policy",
+			"name": "myappr_hosting_MOBILEHUB_707033483",
+			"arn": null,
+			"feature": "hosting",
+			"attributes": {
+				"authType": "unauthenticated",
+				"lastUpdateRequestID": "c5675fe4-12a5-11e8-9be6-cfd9b643e64b",
+				"role": "myappr_unauth_MOBILEHUB_707033483"
+			}
+		},
+		{
+			"type": "AWS::S3::Bucket",
+			"name": "myappr-deployments-mobilehub-707033483",
+			"arn": null,
+			"feature": "common",
+			"attributes": {
+				"region": "us-east-1"
+			}
+		},
+		{
+			"type": "AWS::CloudFormation::Stack",
+			"name": "Development",
+			"arn": null,
+			"feature": "cloud-api",
+			"attributes": {
+				"primary": "true",
+				"region": "us-east-1",
+				"stateSummary": "NOT_YET_DEPLOYED"
+			}
+		}
+	]
+}
