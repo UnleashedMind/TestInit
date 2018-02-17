@@ -1,5 +1,39 @@
 --- !com.amazonaws.mobilehub.v0.Project 
 features:
+  cloudlogic: !com.amazonaws.mobilehub.v0.CloudLogic 
+    components:
+      sampleCloudApi: !com.amazonaws.mobilehub.v0.API 
+        attributes:
+          name: sampleCloudApi
+          requires-signin: false
+          sdk-generation-stage-name: Development
+        paths:
+          /items: !com.amazonaws.mobilehub.v0.Function 
+            codeFilename: uploads/sampleLambda-20180216105410.zip
+            description: 'Handler for calls to resource path : /items/{proxy+}'
+            enableCORS: true
+            environment: {}
+            handler: lambda.handler
+            hashcode: K2it8tX+lYthD7eeWLiMIwqgGY4UB4EjPjJoevFCozs=
+            memorySize: '128'
+            modified: '2018-02-16T18:55:04.845+0000'
+            name: sampleLambda
+            runtime: nodejs6.10
+            timeout: '3'
+            version: zkC5W4miiwWHiO1mv_fAV5VT.LzQnq4b
+          '/items/{proxy+}': !com.amazonaws.mobilehub.v0.Function 
+            codeFilename: uploads/sampleLambda-20180216105410.zip
+            description: 'Handler for calls to resource path : /items/{proxy+}'
+            enableCORS: true
+            environment: {}
+            handler: lambda.handler
+            hashcode: K2it8tX+lYthD7eeWLiMIwqgGY4UB4EjPjJoevFCozs=
+            memorySize: '128'
+            modified: '2018-02-16T18:55:04.845+0000'
+            name: sampleLambda
+            runtime: nodejs6.10
+            timeout: '3'
+            version: CzVUNLAg5H0h1L13ZDDPbwUEo1tCpBJE
   content-delivery: !com.amazonaws.mobilehub.v0.ContentDelivery 
     attributes:
       enabled: true
