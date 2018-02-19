@@ -1,0 +1,13 @@
+query GetPost {
+    getPost(id: 123) {
+        id
+        title
+    }
+}
+
+mutation PutPost {
+    putPost(id: 123, title: "Hello, world!") {
+        id
+        title
+    }
+}
